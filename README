@@ -4,3 +4,8 @@ WeeWikiPaint
 To build:
 - Assume presence of node.js
 - run ./jake.sh
+
+To build in Windows:
+- Install node.js
+- Install Git
+- Clone repository
