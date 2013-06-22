@@ -7,9 +7,10 @@
 "use strict";
 
 var server = require("./server.js");
-var assert = require("assert");
+var http = require ("http");
 
-exports.testNothing = function(test) {
-    test.equals(3,server.number(),"number");
+exports.testHttpsServer=function(test){
+    server.start();
+    http.get("http://localhost:8080",function(reponse){});
     test.done();
 };
