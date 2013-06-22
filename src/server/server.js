@@ -3,5 +3,8 @@
  * Date: 6/21/13
  * Time: 11:39 PM
  */
+"use strict";
 
-console.log("Hello, I'm server !!");
+exports.number = function(){
+  return 3;
+};
