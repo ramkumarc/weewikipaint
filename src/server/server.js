@@ -6,20 +6,17 @@
 "use strict";
 
 var http = require ("http");
+var server;
 
 exports.start = function(){
-    var http = require ("http");
-    var server = http.createServer();
+    server = http.createServer();
 
     server.on("request",function(request,response){
-        console.log("Received request");
-
-        var body = "<html><head><title>Node HTTP</title></head>"+
-            "<body><p>Node's HTTP server</p></body></html>";
-        response.end(body);
+        response.end();
     });
     server.listen(8080);
+};
 
-    console.log("Server started");
-
+exports.stop = function(callback){
+    server.close(callback);
 };
